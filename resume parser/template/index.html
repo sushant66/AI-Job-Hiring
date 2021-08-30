@@ -38,6 +38,15 @@
         <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter phone" value={{data["mobile_number"]}}>
         
     </div>
+    <div class="form-group">
+        <label for="exampleInputPhone">Education</label>
+        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter education" value={{data["degree"]}}>
+        
+    </div>
+    <div class="form-group">
+        <label for="exampleInputPhone">Skills</label>
+        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter skills" value={{data["skills"]|join(',')}}>
+    </div>
     <!--<div class="form-group">
         <label for="exampleInputPassword1">Password</label>
         <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">

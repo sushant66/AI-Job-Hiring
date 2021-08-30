@@ -20,7 +20,8 @@ application.secret_key = "f3cfe9ed8fae309f02079dbf"
 # print a nice greeting.
 @application.route("/")
 def hello():
-    return render_template('index.html')
+    data = {'name': 'name', 'email':'email', 'mobile_number':'phone no','degree':'degree','skills':'skills'}
+    return render_template('index.html', data=data)
 
 
 def allowed_file(filename):
