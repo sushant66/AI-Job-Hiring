@@ -1,0 +1,58 @@
+<html>
+<body>
+    <h1 align="center">AI in Hiring</h1>
+<div>
+  <form action="/index" method="POST" align="center">
+    <br>
+    <label for="jbr"><h3>Job Profiles: </h3></label>
+    <select id="jbr" name="jbr">
+          {%for i in range(0, sizes)%}
+  
+         <option value={{role_ids[i]}}>{{jb_roles[i]}}</option>
+          {%endfor%}
+    </select>
+
+  
+    <br>
+    <br>
+    <table>
+
+      <thead>
+          {% for thd in  t_heads%}
+          <th>{{thd}}</th>
+          {%endfor%}
+      </thead>
+      
+      <tbody>
+        {% for row in  resumes%}
+        <tr>
+          <td>{{loop.index}}</td>
+          <td>{{row}}</td>
+        </tr>
+        {%endfor%}
+      </tbody>
+
+    </table>
+
+    <br>
+    <br>
+    <br>
+    <input type="submit" value="Submit the directory">
+    
+  </form>
+
+  <form action="/result" method="POST" align="center">
+    <br>
+    <input type="submit" value="Go to Next Page">
+  </form>
+
+{% if "NO" not in message %}
+  <div class="alert alert-secondary" role="alert">
+    {{message}}
+  </div>
+{% endif%}
+
+
+</div>
+</body>
+</html>
