@@ -9,19 +9,13 @@
 First, clone the repository to your local machine:
 
 ```bash
-git clone https://github.com/sibtc/django-multiple-user-types-example.git
+https://github.com/sushant66/AI-Job-Hiring.git
 ```
 
 Install the requirements:
 
 ```bash
 pip install -r requirements.txt
-```
-
-Create the database:
-
-```bash
-python manage.py migrate
 ```
 
 Finally, run the development server:
